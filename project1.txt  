@@ -1,0 +1,52 @@
+Ankita Avadhani 
+Collaborated with Benjamin Zeffer 
+#####README#####################
+Overall Description:
+Overall, this code has classes where you can play a game with a set of cards. The way it was written was to people to be able to change, play with or add other classes to play a game such as the war game (def war game) using the Deck and Card Class. All of the classes are a part to creating a game. The card class creates a card, the deck class uses the cards created to make a deck of 52 cards and the hand class uses the deck and card class to create a specific hand for a player based on how many cards the player will use in their specified game. Overall this code is efficient and uses 3 simple classes to make the task of creating a hand for a specific game easy.  
+
+
+
+Class Card: 
+
+Instance--The instance of a Card class represents a literal card of a rank and a suit and initializes the ranking of cards using suits and ranks. This class has three variables suits, ranks and face value.
+
+Input--Class Card takes two inputs, the suit (string) and rank (int). 
+
+Methods-- 
+1) The def__init__ which initializes the ranking system with suits and ranks and its inputs are suit and rank which is the default input for the class Card .This method creates a comparison for winning the game since if the rank is a face card, the value will be assigned to Jack,Queen, King, or Ace and if not the rank stays the same. 
+2) The def__str__ method returns a string with the appropriate rank and suit of the card (the representation of the card as created in the def__init__). The method has the default inputs of the class Card so no specific inputs. 
+
+
+Class Deck:
+
+Instance-- An instance of this class creates a list which represents a deck of cards assorted by suit and rank. We use this class to make a deck of 52 cards so we can play multiple games. 
+
+Input-- No inputs for Class Deck , but depends on values from the  Class Card created above it, . 
+
+Methods--
+1) The def__init__ method creates a list of deck of cards by values of suit and rank. Its input is the default for the class Deck, which are none. 
+2) The def __str__ method returns a multi-line string listing each card showing in the order that the cards are in. There are no inputs for the __str__ method as well. 
+3) The def pop_card method removes and returns a card from the Deck with the default being the last card in the Deck. The input of the popcard method is the default class, and the indexed list which takes the last object of the list (i=-1). This card will no longer be in the deck, it will be taken off. 
+4) The def shuffle method randomly assorts the list of cards in the deck and it has no input using the imported function shuffle which “shuffles” the deck. 
+5) The replace_card method takes an input of card and for each card it will append that card to the list card_str  in case it was removed from the pop_card method.
+6) The def sort_cards method takes default inputs (no inputs) remakes the deck in a sorted way, assuming you can’t have more than 52 cards in a deck.
+
+
+Class Hands: 
+
+Instance-- An instance of a the class Hand represents a hand of cards for a game, with basic functionality meaning number of cards attribute. 
+
+Input-- There are no inputs for this overall class.
+
+Methods--
+1) The def__init__ method takes the default inputs of deck_to_use and num_cards=5 and it creates a hand, with the number of cards that are passed in from the Deck class and Card class used earlier.
+2) The def place card method has an optional input that represents the first card of the hand and it’s the same as the pop_card from the deck, but referencing the HAND's cards. It basically takes a preset variable of zero and removes the first card. 
+3) The def gets_suits_available has no input and returns list of all the suits that are in the hand.
+4) The def get_ranks_available has no input and returns list of all the ranks that are in the hand
+5)The def specific_card method has the input of suit and rank and if find the card in the hand, get rid of that card from the hand and return it from this method and if there is none such card in the hand, return None value
+6) The def add_card method takes in the input card adds card to hand (if there is no identical one, assuming working with 1 deck here).		
+7) The def __str__ method takes in no inputs and returns a multi-line string listing each card in lowest to highest ranking.
+
+
+
+
